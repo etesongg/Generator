@@ -3,11 +3,14 @@ from generators.addr_generator import AddrGenerate
 from generators.gender_generator import GenderGenerate
 from generators.birthdate_generate import BirthdateGenerate
 from generators.age_calc import AgeCale
-from functions.printer import Printer
 from generators.uuid_generator import Uuidenerate
 from generators.storename_generator import StoreGenerate
 from generators.orderat_generator import OrderatGenerator
+from generators.itemname_generator import ItemDataGenerate
+
+from functions.printer import Printer
 from functions.csv_get_id import CsvGetId
+
 
 class Human_generate:
     def __init__(self):
@@ -70,10 +73,20 @@ class Order_generate:
             data.append(f'{id},{orderat},{storeid},{userid}')
         Printer.output_type(data, "order_info.csv")
 
+class Item_generate:
+    def __init__(self):
+        self.id = Uuidenerate()
+        self.itemdata = ItemDataGenerate()
+
+    def generate_data(self):
+        data = ["Id, Name, Type, UnitPrice"]
+
 if __name__ == "__main__":
     # human = Human_generate()
     # human.generate_data()
     # store = Store_generate()
     # store.generate_data()
-    order = Order_generate()
-    order.generate_data()
+    # order = Order_generate()
+    # order.generate_data()
+    item = Item_generate()
+    item.generate_data()
