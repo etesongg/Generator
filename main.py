@@ -24,7 +24,7 @@ class Human_generate:
     def generate_data(self):
         data = ["Id, Name, Gender, Age, BirthDate, Address"]
         
-        for _ in range(Printer.input_count()):
+        for _ in range(Printer.input_count("user")):
             id = self.id.generate_uuid()
             name = self.name.generate_name()
             addr = self.addr.generate_addr()
@@ -45,7 +45,7 @@ class Store_generate:
     def generate_data(self):
         data = ["Id, Name, Type, Address"]
         
-        for _ in range(Printer.input_count()):   
+        for _ in range(Printer.input_count("store")):   
             id = self.id.generate_uuid()
             storename = self.storename.generate_storename()
             storetype = (storename.split())[0]
@@ -65,7 +65,7 @@ class Order_generate:
     def generate_data(self):
         data =["Id, OrderAt, StoreId, UserId"]
 
-        for _ in range(Printer.input_count()):
+        for _ in range(Printer.input_count("order")):
             id = self.id.generate_uuid()
             orderat = self.orderat.generate_orderat()
             storeid = self.storeid.get_id("", "store_info.csv")
@@ -83,7 +83,7 @@ class Item_generate:
     def generate_data(self):
         data = ["Id, Name, Type, UnitPrice"]
 
-        for _ in range(Printer.input_count()):
+        for _ in range(Printer.input_count("item")):
             id = self.id.generate_uuid()
             itemdata = self.itemdata.generate_itemdata()
 
@@ -99,7 +99,7 @@ class OrderItem_generate:
     def generate_data(self):
         data = ["Id, OrderId, ItemId"]
 
-        for _ in range(Printer.input_count()):
+        for _ in range(Printer.input_count("orderitem")):
             id = self.id.generate_uuid()
             orderid = self.orderid.get_id("", "order_info.csv")
             itemid = self.itemid.get_id("", "item_info.csv")
@@ -110,13 +110,13 @@ class OrderItem_generate:
 
 
 if __name__ == "__main__":
-    # human = Human_generate()
-    # human.generate_data()
-    # store = Store_generate()
-    # store.generate_data()
-    # order = Order_generate()
-    # order.generate_data()
-    # item = Item_generate()
-    # item.generate_data()
+    human = Human_generate()
+    human.generate_data()
+    store = Store_generate()
+    store.generate_data()
+    order = Order_generate()
+    order.generate_data()
+    item = Item_generate()
+    item.generate_data()
     orderitem = OrderItem_generate()
     orderitem.generate_data()

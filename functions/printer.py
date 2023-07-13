@@ -2,9 +2,9 @@ import csv
 
 class Printer:
     @staticmethod
-    def input_count():
+    def input_count(make_name):
         try:
-            count = int(input("데이터를 생성할 개수를 입력해주세요: "))
+            count = int(input(f'{make_name} 데이터를 생성할 개수를 입력해주세요: '))
 
             if count < 0:
                 raise ValueError()
