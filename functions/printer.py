@@ -22,8 +22,8 @@ class Printer:
                 with open("user_info.csv", "w", newline='',encoding='utf-8-sig') as file:
                     csv_file = csv.writer(file)
                     for item in data:
-                        # fields = item.split(',')
-                        csv_file.writerow([item])  # 각 필드를 따옴표로 묶어 쓰기
+                        fields = item.split(',')
+                        csv_file.writerow(fields)  # 각 필드를 따옴표로 묶어 쓰기
                         # 줄마다 , 기준으로 나눠서 각 셀에 넣어지게 하기
 
                 print("csv write done")

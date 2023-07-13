@@ -16,7 +16,7 @@ class Human_generate:
         self.age = AgeCale()
 
     def generate_data(self):
-        data = ["Id, Name, Gender, BirthDate, Age, Address"]
+        data = ["Id, Name, Gender, Age, BirthDate, Address"]
         for _ in range(Printer.input_count()):
             id = self.id.generate_uuid()
             name = self.name.generate_name()
@@ -24,7 +24,7 @@ class Human_generate:
             gender = self.gender.generate_gender()
             birthdate = self.birthdate.generate_birthdate()
             age = self.age.calculate_age(birthdate)
-            data.append(f'{id}, {name}, {gender}, {age}, {birthdate}, {addr}')
+            data.append(f'{id},{name},{gender},{age},{birthdate},{addr}')
 
         Printer.output_type(data)
 
