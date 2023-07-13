@@ -52,6 +52,7 @@ class Store_generate:
             addr = self.addr.generate_addr()
             
             data.append(f'{id},{storename},{storetype},{addr}')
+
         Printer.output_type(data, "store_info.csv")
 
 class Order_generate:
@@ -71,6 +72,7 @@ class Order_generate:
             userid = self.userid.get_id("", "user_info.csv")
 
             data.append(f'{id},{orderat},{storeid},{userid}')
+
         Printer.output_type(data, "order_info.csv")
 
 class Item_generate:
@@ -88,6 +90,25 @@ class Item_generate:
             data.append(f'{id},{itemdata}')
         Printer.output_type(data, "item_info.csv")
 
+class OrderItem_generate:
+    def __init__(self):
+        self.id =Uuidenerate()
+        self.orderid = CsvGetId()
+        self.itemid = CsvGetId()
+
+    def generate_data(self):
+        data = ["Id, OrderId, ItemId"]
+
+        for _ in range(Printer.input_count()):
+            id = self.id.generate_uuid()
+            orderid = self.orderid.get_id("", "order_info.csv")
+            itemid = self.itemid.get_id("", "item_info.csv")
+
+            data.append(f'{id},{orderid},{itemid}')
+
+        Printer.output_type(data, "orderitem_info.csv")
+
+
 if __name__ == "__main__":
     # human = Human_generate()
     # human.generate_data()
@@ -95,5 +116,7 @@ if __name__ == "__main__":
     # store.generate_data()
     # order = Order_generate()
     # order.generate_data()
-    item = Item_generate()
-    item.generate_data()
+    # item = Item_generate()
+    # item.generate_data()
+    orderitem = OrderItem_generate()
+    orderitem.generate_data()
