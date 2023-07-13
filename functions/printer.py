@@ -15,11 +15,11 @@ class Printer:
             count = Printer.input_count()
 
     @staticmethod
-    def output_type(data):
+    def output_type(data, csv_name):
         try:
             select_type = input("출력될 결과물 타입을 입력해주세요(console, csv): ")
             if select_type == "csv":
-                with open("user_info.csv", "w", newline='',encoding='utf-8-sig') as file:
+                with open(csv_name, "w", newline='',encoding='utf-8-sig') as file:
                     csv_file = csv.writer(file)
                     for item in data:
                         fields = item.split(',')
@@ -33,4 +33,4 @@ class Printer:
                 raise ValueError()
         except ValueError:
             print("console, csv 중 하나를 정확하게 입력해주세요.")
-            Printer.output_type(data)
+            Printer.output_type(data, csv_name)

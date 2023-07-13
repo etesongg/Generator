@@ -18,6 +18,7 @@ class Human_generate:
 
     def generate_data(self):
         data = ["Id, Name, Gender, Age, BirthDate, Address"]
+        
         for _ in range(Printer.input_count()):
             id = self.id.generate_uuid()
             name = self.name.generate_name()
@@ -25,20 +26,28 @@ class Human_generate:
             gender = self.gender.generate_gender()
             birthdate = self.birthdate.generate_birthdate()
             age = self.age.calculate_age(birthdate)
+            
             data.append(f'{id},{name},{gender},{age},{birthdate},{addr}')
 
-        Printer.output_type(data)
+        Printer.output_type(data, "user_info.csv")
 
 class Store_generate:
     def __init__(self):
         self.id = Uuidenerate()
         self.storename = StoreGenerate()
+        self.addr = AddrGenerate()
 
     def generate_data(self):
         data = ["Id, Name, Type, Address"]
         
-        id = self.id.generate_uuid()
-        storename = self.storename.generate_storename()
+        for _ in range(Printer.input_count()):   
+            id = self.id.generate_uuid()
+            storename = self.storename.generate_storename()
+            storetype = (storename.split())[0]
+            addr = self.addr.generate_addr()
+            
+            data.append(f'{id},{storename},{storetype},{addr}')
+        Printer.output_type(data, "store_info.csv")
 
     
 
