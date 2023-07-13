@@ -5,6 +5,7 @@ from generators.birthdate_generate import BirthdateGenerate
 from generators.age_calc import AgeCale
 from functions.printer import Printer
 from generators.uuid_generator import Uuidenerate
+from generators.storename_generator import StoreGenerate
 
 class Human_generate:
     def __init__(self):
@@ -28,7 +29,22 @@ class Human_generate:
 
         Printer.output_type(data)
 
+class Store_generate:
+    def __init__(self):
+        self.id = Uuidenerate()
+        self.storename = StoreGenerate()
+
+    def generate_data(self):
+        data = ["Id, Name, Type, Address"]
+        
+        id = self.id.generate_uuid()
+        storename = self.storename.generate_storename()
+
+    
+
 
 if __name__ == "__main__":
-    human = Human_generate()
-    human.generate_data()
+    # human = Human_generate()
+    # human.generate_data()
+    store = Store_generate()
+    store.generate_data()
