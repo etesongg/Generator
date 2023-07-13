@@ -26,7 +26,7 @@ class Printer:
                         csv_file.writerow(fields)  # 각 필드를 따옴표로 묶어 쓰기
                         # 줄마다 , 기준으로 나눠서 각 셀에 넣어지게 하기
 
-                print("csv write done")
+                print(f'{csv_name} write done')
             elif select_type == "console":
                 print(data)
             else:

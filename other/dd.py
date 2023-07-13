@@ -1,19 +1,13 @@
-# import random 
-from datetime import datetime
 import random
-from datetime import timedelta
-import datetime
+from ..functions.Load_file_data import LoadFileData
 
 
-def generate_orderat():
-    datestring = datetime.datetime.strftime(datetime.datetime( \
-    2023, \
-    random.randint(1, 12), \
-    random.randint(1, 28), \
-    random.randrange(23), \
-    random.randrange(59), \
-    random.randrange(59), \
-    random.randrange(1000000)), '%Y-%m-%d %H:%M:%S')
-    print(datestring)
-    
-generate_orderat()
+def get_id(filepath, csv_file_name):
+    id = LoadFileData()
+    csv_id = id.csv_load_file(filepath, csv_file_name)
+    print(csv_id)
+    generated_getid = random.choice(csv_id)
+    # print(generated_getid)
+    return generated_getid
+
+get_id("","user_info.csv")
