@@ -7,6 +7,7 @@ from functions.printer import Printer
 from generators.uuid_generator import Uuidenerate
 from generators.storename_generator import StoreGenerate
 from generators.orderat_generator import OrderatGenerator
+from functions.csv_get_id import CsvGetId
 
 class Human_generate:
     def __init__(self):
@@ -54,15 +55,20 @@ class Order_generate:
     def __init__(self):
         self.id = Uuidenerate()
         self.orderat = OrderatGenerator()
+        self.storeid = CsvGetId()
+        self.userid = CsvGetId()
         
     def generate_data(self):
         data =["Id, OrderAt, StoreId, UserId"]
 
-        id = self.id.generate_uuid()
-        orderat = self.orderat.generate_orderat()
+        for _ in range(Printer.input_count()):
+            id = self.id.generate_uuid()
+            orderat = self.orderat.generate_orderat()
+            storeid = self.storeid.get_id("", "store_info.csv")
+            userid = self.userid.get_id("", "user_info.csv")
 
-        # storeid = 
-        # userid = 
+            data.append(f'{id},{orderat},{storeid},{userid}')
+        Printer.output_type(data, "order_info.csv")
 
 if __name__ == "__main__":
     # human = Human_generate()
