@@ -6,6 +6,7 @@ from generators.age_calc import AgeCale
 from functions.printer import Printer
 from generators.uuid_generator import Uuidenerate
 from generators.storename_generator import StoreGenerate
+from generators.orderat_generator import OrderatGenerator
 
 class Human_generate:
     def __init__(self):
@@ -49,11 +50,24 @@ class Store_generate:
             data.append(f'{id},{storename},{storetype},{addr}')
         Printer.output_type(data, "store_info.csv")
 
-    
+class Order_generate:
+    def __init__(self):
+        self.id = Uuidenerate()
+        self.orderat = OrderatGenerator()
+        
+    def generate_data(self):
+        data =["Id, OrderAt, StoreId, UserId"]
 
+        id = self.id.generate_uuid()
+        orderat = self.orderat.generate_orderat()
+
+        # storeid = 
+        # userid = 
 
 if __name__ == "__main__":
     # human = Human_generate()
     # human.generate_data()
-    store = Store_generate()
-    store.generate_data()
+    # store = Store_generate()
+    # store.generate_data()
+    order = Order_generate()
+    order.generate_data()
