@@ -1,0 +1,35 @@
+import csv
+import pandas as pd
+
+class Printer:
+    @staticmethod
+    def input_count():
+        try:
+            count = int(input("데이터를 생성할 개수를 입력해주세요: "))
+
+            if count < 0:
+                raise ValueError()
+            else:
+                return count
+        except ValueError:
+            print("양수를 입력해주세요")
+            count = Printer.input_count()
+
+    @staticmethod
+    def output_type(data):
+        try:
+            select_type = input("출력될 결과물 타입을 입력해주세요(console, csv): ")
+            if select_type == "csv":
+                with open("user_info.csv", "w", newline='',encoding='utf-8-sig') as file:
+                    csv_file = csv.writer(file)
+                    for item in data:
+                        csv_file.writerow([item])  # 각 필드를 따옴표로 묶어 쓰기
+
+                print("csv write done")
+            elif select_type == "console":
+                print(data)
+            else:
+                raise ValueError()
+        except ValueError:
+            print("console, csv 중 하나를 정확하게 입력해주세요.")
+            Printer.output_type(data)

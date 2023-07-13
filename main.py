@@ -3,19 +3,29 @@ from generators.addr_generator import AddrGenerate
 from generators.gender_generator import GenderGenerate
 from generators.birthdate_generate import BirthdateGenerate
 from generators.age_calc import AgeCale
+from functions.printer import Printer
 
+class Human_generate:
+    def __init__(self):
+        self.name = NameGenerate()
+        self.addr = AddrGenerate()
+        self.gender = GenderGenerate()
+        self.birthdate = BirthdateGenerate()
+        self.age = AgeCale()
 
-def main():
-    name = NameGenerate()
-    name.generate_name()
-    addr = AddrGenerate()
-    addr.generate_addr()
-    gender = GenderGenerate()
-    gender.generate_gender()
-    birthdate = BirthdateGenerate()
-    birthdate.generate_birthdate()
-    age = AgeCale()
-    age.calculate_age(birthdate.generate_birthdate())
+    def generate_data(self):
+        data = []
+        for _ in range(Printer.input_count()):
+            name = self.name.generate_name()
+            addr = self.addr.generate_addr()
+            gender = self.gender.generate_gender()
+            birthdate = self.birthdate.generate_birthdate()
+            age = self.age.calculate_age(birthdate)
+            data.append(f'{name}, {gender}, {age}, {birthdate}, {addr}')
+
+        Printer.output_type(data)
+
 
 if __name__ == "__main__":
-    main()
+    human = Human_generate()
+    human.generate_data()
