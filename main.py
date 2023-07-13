@@ -81,6 +81,13 @@ class Item_generate:
     def generate_data(self):
         data = ["Id, Name, Type, UnitPrice"]
 
+        for _ in range(Printer.input_count()):
+            id = self.id.generate_uuid()
+            itemdata = self.itemdata.generate_itemdata()
+
+            data.append(f'{id},{itemdata}')
+        Printer.output_type(data, "item_info.csv")
+
 if __name__ == "__main__":
     # human = Human_generate()
     # human.generate_data()
