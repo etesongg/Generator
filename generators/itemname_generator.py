@@ -37,7 +37,7 @@ class ItemDataGenerate:
         
         
         # print(item_type, item_name, item_price)
-        return f'{item_name},{item_type},{item_price}'
+        return f'{item_name+item_type},{item_type},{item_price}'
 
 # a = ItemDataGenerate()
 # a.generate_itemdata()

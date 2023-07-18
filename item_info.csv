@@ -1,31 +1,31 @@
 ﻿Id, Name, Type, UnitPrice
-2afa9dbb-5d39-4f0c-ac68-022a4d758a36,Orange,Juice,2000
-98936d22-d8a3-4de9-be32-b55ca33b8dda,Mocha,Coffee,5000
-14b19a2e-3786-4eb1-ad4d-c87f18849265,Carrot,Cake,6000
-57d11418-f966-4959-9db7-9dc4b002a785,Americano,Coffee,3000
-f532407b-245a-45c4-a8cb-d74f2ab2fb0b,Espresso,Coffee,2500
-1e6d8b45-ec54-4758-b4f3-42ab56421081,Chocolate,Cake,6000
-c8801226-6bad-43f6-b57e-e6c99f3ad5ad,Latte,Coffee,4000
-b8ea459f-5e23-4240-be02-c76caca38d93,Cappuccino,Coffee,4500
-2b9e7a76-7554-41bc-9d36-a0658eeaff21,Strawberry,Cake,5500
-32c7ad1d-bf61-4db4-b4b9-46b54c3ed316,Latte,Coffee,4000
-be9c92e3-0a6c-40ba-ab4f-c7212e0d2847,Cappuccino,Coffee,4500
-ae3e7af6-1bd6-48e7-82e7-beb8e5aaf895,Carrot,Cake,6000
-ca2968e4-9f3b-4a78-8742-00bd66664f7c,Grape,Juice,3000
-ae4115b2-14bc-49e4-a88b-c714a2655c68,Vanilla,Cake,5000
-00b10014-5a44-486c-968c-16981db666ae,Watermelon,Juice,4000
-85d7f1a1-1bb0-4109-a76d-728304bb221a,Espresso,Coffee,2500
-3ab1354d-962b-46bc-8dc0-b3bdfde91bff,Pineapple,Juice,3500
-171efdc4-f935-47ee-a9ea-f40e98d0004a,Apple,Juice,2500
-2e8a4189-5115-4b82-ba7c-b55b34def560,Strawberry,Cake,5500
-862e4e43-cf67-4ee0-9f1e-8a7a724ab28c,Americano,Coffee,3000
-f04e7e09-e438-4122-98c2-4337e4e4ef1a,Chocolate,Cake,6000
-43666ead-24d8-4492-89cb-b1d6753c35e7,Latte,Coffee,4000
-dc4f43f7-1551-4245-9a44-9f4ecc232494,Mocha,Coffee,5000
-50f95b88-1990-4b67-a9ba-863d53405d50,Chocolate,Cake,6000
-0389bd97-2912-4af1-beff-fffd36cbdb6f,Apple,Juice,2500
-7796fdd7-20e8-4076-861e-5a64dc941327,Cappuccino,Coffee,4500
-4507f4e9-f011-4988-bd60-1ddc52965e49,Americano,Coffee,3000
-5959a8c9-1ed3-4ce0-bd6d-7eeaeab75fb1,Grape,Juice,3000
-d9f78d9e-e778-41a2-8057-493d2d615895,Mocha,Coffee,5000
-b71c8643-8707-47e0-903f-0e787a9fc294,Vanilla,Cake,5000
+2afa9dbb-5d39-4f0c-ac68-022a4d758a36,Orange Juice,Juice,2000
+98936d22-d8a3-4de9-be32-b55ca33b8dda,Mocha Coffee,Coffee,5000
+14b19a2e-3786-4eb1-ad4d-c87f18849265,Carrot Cake,Cake,6000
+57d11418-f966-4959-9db7-9dc4b002a785,Americano Coffee,Coffee,3000
+f532407b-245a-45c4-a8cb-d74f2ab2fb0b,Espresso Coffee,Coffee,2500
+1e6d8b45-ec54-4758-b4f3-42ab56421081,Chocolate Cake,Cake,6000
+c8801226-6bad-43f6-b57e-e6c99f3ad5ad,Latte Coffee,Coffee,4000
+b8ea459f-5e23-4240-be02-c76caca38d93,Cappuccino Coffee,Coffee,4500
+2b9e7a76-7554-41bc-9d36-a0658eeaff21,Strawberry Cake,Cake,5500
+32c7ad1d-bf61-4db4-b4b9-46b54c3ed316,Latte Coffee,Coffee,4000
+be9c92e3-0a6c-40ba-ab4f-c7212e0d2847,Cappuccino Coffee,Coffee,4500
+ae3e7af6-1bd6-48e7-82e7-beb8e5aaf895,Carrot Cake,Cake,6000
+ca2968e4-9f3b-4a78-8742-00bd66664f7c,Grape Juice,Juice,3000
+ae4115b2-14bc-49e4-a88b-c714a2655c68,Vanilla Cake,Cake,5000
+00b10014-5a44-486c-968c-16981db666ae,Watermelon Juice,Juice,4000
+85d7f1a1-1bb0-4109-a76d-728304bb221a,Espresso Coffee,Coffee,2500
+3ab1354d-962b-46bc-8dc0-b3bdfde91bff,Pineapple Juice,Juice,3500
+171efdc4-f935-47ee-a9ea-f40e98d0004a,Apple Juice,Juice,2500
+2e8a4189-5115-4b82-ba7c-b55b34def560,Strawberry Cake,Cake,5500
+862e4e43-cf67-4ee0-9f1e-8a7a724ab28c,Americano Coffee,Coffee,3000
+f04e7e09-e438-4122-98c2-4337e4e4ef1a,Chocolate Cake,Cake,6000
+43666ead-24d8-4492-89cb-b1d6753c35e7,Latte Coffee,Coffee,4000
+dc4f43f7-1551-4245-9a44-9f4ecc232494,Mocha Coffee,Coffee,5000
+50f95b88-1990-4b67-a9ba-863d53405d50,Chocolate Cake,Cake,6000
+0389bd97-2912-4af1-beff-fffd36cbdb6f,Apple Juice,Juice,2500
+7796fdd7-20e8-4076-861e-5a64dc941327,Cappuccino Coffee,Coffee,4500
+4507f4e9-f011-4988-bd60-1ddc52965e49,Americano Coffee,Coffee,3000
+5959a8c9-1ed3-4ce0-bd6d-7eeaeab75fb1,Grape Juice,Juice,3000
+d9f78d9e-e778-41a2-8057-493d2d615895,Mocha Coffee,Coffee,5000
+b71c8643-8707-47e0-903f-0e787a9fc294,Vanilla Cake,Cake,5000
