@@ -22,8 +22,8 @@ class Human_generate:
         self.age = AgeCale()
 
     def generate_data(self):
-        # data = ["Id, Name, Gender, Age, BirthDate, Address"]
-        data = []
+        data = ["Id, Name, Gender, Age, BirthDate, Address"]
+        # data = []
         
         for _ in range(Printer.input_count("user")):
             id = self.id.generate_uuid()
@@ -44,8 +44,8 @@ class Store_generate:
         self.addr = AddrGenerate()
 
     def generate_data(self):
-        # data = ["Id, Name, Type, Address"]
-        data = []
+        data = ["Id, Name, Type, Address"]
+        # data = []
         
         for _ in range(Printer.input_count("store")):   
             id = self.id.generate_uuid()
@@ -65,14 +65,14 @@ class Order_generate:
         self.userid = CsvGetId()
         
     def generate_data(self):
-        # data =["Id, OrderAt, StoreId, UserId"]
-        data = []
+        data =["Id, OrderAt, StoreId, UserId"]
+        # data = []
 
         for _ in range(Printer.input_count("order")):
             id = self.id.generate_uuid()
             orderat = self.orderat.generate_orderat()
-            storeid = self.storeid.get_id("", "store_info.csv")
-            userid = self.userid.get_id("", "user_info.csv")
+            storeid = self.storeid.get_id("", "store.csv")
+            userid = self.userid.get_id("", "user.csv")
 
             data.append(f'{id},{orderat},{storeid},{userid}')
 
@@ -84,8 +84,8 @@ class Item_generate:
         self.itemdata = ItemDataGenerate()
 
     def generate_data(self):
-        # data = ["Id, Name, Type, UnitPrice"]
-        data = []
+        data = ["Id, Name, Type, UnitPrice"]
+        # data = []
 
         for _ in range(Printer.input_count("item")):
             id = self.id.generate_uuid()
@@ -101,13 +101,13 @@ class OrderItem_generate:
         self.itemid = CsvGetId()
 
     def generate_data(self):
-        # data = ["Id, OrderId, ItemId"]
-        data = []
+        data = ["Id, OrderId, ItemId"]
+        # data = []
 
         for _ in range(Printer.input_count("orderitem")):
             id = self.id.generate_uuid()
-            orderid = self.orderid.get_id("", "order_info.csv")
-            itemid = self.itemid.get_id("", "item_info.csv")
+            orderid = self.orderid.get_id("", "order.csv")
+            itemid = self.itemid.get_id("", "item.csv")
 
             data.append(f'{id},{orderid},{itemid}')
 

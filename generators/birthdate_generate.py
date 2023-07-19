@@ -2,7 +2,7 @@ import random
 
 class BirthdateGenerate:
     def generate_birthdate(self):
-        year = random.randint(1987, 2011)
+        year = random.randint(1960, 2011)
         month = random.randint(1, 12)
 
         if month == 2:
